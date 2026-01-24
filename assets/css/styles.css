@@ -334,7 +334,9 @@ height: 100%;
   width: 100%;
   max-height: 70vh;
   overflow-y: auto;
-  background: none;
+  background: rgba(250, 248, 244, 0.9);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 @media (max-width: 991px) {
@@ -350,7 +352,7 @@ height: 100%;
 .megamenu-item {
   font-size: 0.9rem;
   padding: .8rem;
-  border-left: 3px solid #007bff;
+  border-left: 3px solid #777777;
   background: #ececec;
   margin-bottom: 0.5rem;
   cursor: pointer;
