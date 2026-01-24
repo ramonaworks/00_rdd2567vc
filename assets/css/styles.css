@@ -322,6 +322,63 @@ height: 100%;
 
 
 /* =========================================================
+   MEGAMENU
+   ========================================================= */
+.megamenu {
+  min-width: 24rem; /* 500px at default 16px font size */
+  border: 1px solid #84848466;
+  border-radius: 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: none;
+}
+
+@media (max-width: 991px) {
+  .megamenu {
+    min-width: 100%;
+    max-height: 60vh;
+    position: static;
+    border-left: 0;
+    border-right: 0;
+  }
+}
+
+.megamenu-item {
+  font-size: 0.9rem;
+  padding: .8rem;
+  border-left: 3px solid #007bff;
+  background: #ececec;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: block;
+}
+
+.megamenu-item:last-child {
+  margin-bottom: 0;
+}
+
+.megamenu-item:hover {
+  background-color: #ffffff;
+}
+
+.megamenu-item i {
+  color: #db0000;
+  font-size: 1.1rem;
+}
+
+.megamenu-item p {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: normal;
+  text-transform: none;
+}
+
+/* =========================================================
    MOBILE NAVIGATION
    ========================================================= */
 
