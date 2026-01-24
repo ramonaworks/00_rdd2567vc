@@ -8,7 +8,10 @@
   --ink: #2a2a2a;
   --ink-soft: #555;
   --ink-faint: #777;
-  --muted: #5b5b5b;
+  --muted: #5b5b5b; 
+  --bs-link-color: #003688;
+  --bs-link-hover-color: #163b6b;
+  --bs-link-color-rgb: 0, 54, 136;
 
   /* Surfaces */
   --bg: #faf8f4;
@@ -335,6 +338,11 @@ height: 100%;
   max-height: 70vh;
   overflow-y: auto;
   background: rgba(250, 248, 244, 0.9);
+    /* Shading the edges */
+    box-shadow:
+      0 12px 32px rgba(0,0,0,0.14),
+      inset 0 0 30px rgba(0,0,0,0.12);
+
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
@@ -353,7 +361,7 @@ height: 100%;
   font-size: 0.9rem;
   padding: .8rem;
   border-left: 3px solid #777777;
-  background: #ececec;
+  background: #c2c2c22e;
   margin-bottom: 0.5rem;
   cursor: pointer;
   transition: background-color 0.2s;
