@@ -446,3 +446,43 @@ height: 100%;
     --nav-height: 5rem;
   }
 }
+
+
+/* =========================================================
+   Ramona Board | Figma Screens | Product Demo
+   ========================================================= */
+
+  .ramona-swipe {
+  margin: 4rem 0;
+  position: relative;
+}
+
+.ramona-swipe-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.ramona-swipe-track:active {
+  cursor: grabbing;
+}
+
+.ramona-swipe-track img {
+  flex: 0 0 auto;
+  width: 320px;
+  height: auto;
+  scroll-snap-align: start;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.ramona-swipe-hint {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 8px;
+}
+ 
