@@ -486,3 +486,18 @@ height: 100%;
   margin-top: 8px;
 }
  
+/* CTA Options for AB Experiments */
+/* Ebooks Digital Downloads */
+    .free-tag {
+      display: inline-block;
+      padding: 3px 8px;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: 1px solid #000;
+      background-color: #333333;
+      color: #ececec; 
+      margin-bottom: 2px;
+      margin-right:6px;
+      font-weight: 600;
+    }
