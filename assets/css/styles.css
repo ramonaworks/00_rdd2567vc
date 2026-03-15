@@ -486,3 +486,48 @@ height: 100%;
   margin-top: 8px;
 }
  
+/* Key Deliverables */
+.deliverable-list{
+  list-style:none;
+  padding-left:0;
+  margin:0;
+}
+
+.deliverable-list li{
+  margin-bottom:.5rem;
+}
+
+.deliverable-list li a{
+  display:grid;
+  grid-template-columns:1.4rem 1fr;
+  column-gap:.55rem;
+  align-items:start;
+  text-decoration:none;
+  color:var(--ink-soft);
+  line-height:1.4;
+}
+
+.deliverable-list .icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:1.15rem;
+  height:1.15rem;
+  margin-top:.1rem;
+  background:var(--muted);
+  border-radius:.3rem;
+}
+
+.deliverable-list .icon i{
+  font-size:.65rem;
+  color:var(--bg);
+  line-height:1;
+}
+
+.deliverable-list li a:hover{
+  color:var(--bs-link-color);
+}
+
+.deliverable-list li a:hover .icon{
+  background:var(--bs-link-color);
+}
