@@ -447,6 +447,69 @@ height: 100%;
   }
 }
 
+/* =========================================================
+   Layout with TOC 
+   ========================================================= */
+
+
+  .pof-hero-shell {
+    overflow: hidden;
+    padding: 2rem;
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.72), rgba(243,241,238,0.94)),
+      radial-gradient(circle at top right, rgba(0,54,136,0.08), transparent 34%);
+  }
+ 
+
+  .pof-toc {
+    position: sticky;
+    top: calc(var(--nav-height) + 1.25rem);
+    padding: 0.5rem;
+    font-size: .85rem;
+  }
+
+  .pof-toc a {
+    display: flex;
+    justify-content: space-between;
+    gap: .3rem;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid var(--line);
+    color: var(--ink);
+    text-decoration: none;
+    border-left: 3px #ECECEC solid;
+  }
+
+  .pof-toc a:first-of-type {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .pof-toc a:hover,
+  .pof-toc a:focus {
+    color: var(--bs-link-color);
+    background-color: #ececec;
+    border-left: 3px #1e1e1e solid;
+  }
+
+  .pof-chapter {
+    border-top: 1px solid var(--line);
+  }
+
+  .pof-pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  @media (max-width: 991.98px) {
+    .pof-hero-shell {
+      padding: 1.5rem;
+    }
+
+    .pof-toc {
+      position: static;
+    }
+  }
 
 /* =========================================================
    Ramona Board | Figma Screens | Product Demo
