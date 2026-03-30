@@ -4,18 +4,36 @@
    ========================================================= */
 
 :root {
-  /* Core colors */
-  --ink: #2a2a2a;
-  --ink-soft: #555;
-  --ink-faint: #777;
-  --muted: #5b5b5b; 
-  --bs-link-color: #003688;
-  --bs-link-hover-color: #163b6b;
-  --bs-link-color-rgb: 0, 54, 136;
+/* Core colors */
+--ink: #2a2a2a;
+--ink-soft: #555;
+--ink-faint: #777;
+--muted: #5b5b5b;
 
-  /* Bootstrap text-info, etc. */
-  --bs-info: #333333;
-  --bs-info-rgb: 51, 51, 51;
+/* Bootstrap semantic colors */
+--bs-primary: #00739A;
+--bs-primary-rgb: 0, 148, 198;
+
+--bs-info: #333333;
+--bs-info-rgb: 51, 51, 51;
+
+/* Link styles */
+--bs-link-color: #003688;
+--bs-link-hover-color: #163b6b;
+--bs-link-color-rgb: 0, 54, 136;
+
+/* Custom action + system extensions */
+--bs-action-hover: #0094C6;
+--bs-action-soft: #D9EFF7;
+--bs-action-deep: #0B3341;
+
+/* Extended palette */
+--bs-copper: #605856;
+--bs-copper-soft: #D0CCD0;
+--bs-sage: #647766;
+--bs-sage-soft: #DDE7DE;
+--bs-ink-band: #23364A;
+--bs-feature-surface: #FFFAF2;
 
 
   /* Surfaces */
@@ -57,7 +75,33 @@ main {
 }
 
 .btn {
-  border-radius: 0.625rem;
+  border-radius: 0.5rem;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--bs-action-hover);
+  --bs-btn-hover-border-color: var(--bs-action-hover);
+
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--bs-action-hover);
+  --bs-btn-active-border-color: var(--bs-action-hover);
+}
+
+/* OPTIONAL OVERRIDE: soft tint button */
+.btn-soft-tint {
+  --bs-btn-color: #8B3F00;
+  --bs-btn-bg: #dedede;
+  --bs-btn-border-color: #1e1e1e;
+
+  --bs-btn-hover-color: #8B3F00;
+  --bs-btn-hover-bg: #d0ccd0;
+  --bs-btn-hover-border-color: #E3DBD6;
+
+  --bs-btn-active-color: #8B3F00;
+  --bs-btn-active-bg: #D9D0CA;
+  --bs-btn-active-border-color: #D9D0CA;
 }
 
 /* =========================================================
