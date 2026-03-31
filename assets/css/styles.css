@@ -190,17 +190,38 @@ main {
 }
 
 .navbar-nav .nav-link {
-  font-size: 0.68rem;
+  display: inline-flex;
+  align-items: center; 
+  padding-left: .85rem!important;
+  padding-right: .85rem!important;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-size: 0.73rem;
   letter-spacing: 0.14em;
-  color: var(--ink);
-  padding-left: 0.85rem;
-  padding-right: 0.85rem;
+  color: var(--ink); 
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--bs-link-color);
+  border-color: rgba(var(--bs-primary-rgb), 0.18);
+  background: rgba(237, 244, 248, 0.92);
+}
+
+.navbar-nav .nav-link .bi {
+  color: var(--bs-primary);
+  font-size: 0.8rem;
 }
 
 .navbar-nav .btn {
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  padding: 0.4rem 1.5rem;
+  --bs-btn-padding-y: 0.7rem;
+  --bs-btn-padding-x: 1.18rem;
+  font-size: 0.73rem;
+  letter-spacing: 0.1em;
+}
+
+.nav-cta {
+  white-space: nowrap;
 }
 
 /* =========================================================
