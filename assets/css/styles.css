@@ -35,6 +35,21 @@
 --bs-ink-band: #23364A;
 --bs-feature-surface: #FFFAF2;
 
+  /* Lines and shadows */
+  --line: rgba(35, 54, 74, 0.16);
+  --line-strong: rgba(35, 54, 74, 0.26);
+  --shadow-soft: 0 1px 0 rgba(35, 54, 74, 0.08), 0 8px 18px rgba(35, 54, 74, 0.05);
+  --shadow-card: 0 14px 28px rgba(35, 54, 74, 0.09), 0 3px 10px rgba(35, 54, 74, 0.05);
+  --shadow-lift: 0 20px 40px rgba(35, 54, 74, 0.12), 0 6px 18px rgba(35, 54, 74, 0.08);
+
+  /* Radius and rhythm */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.5rem;
+  --radius-pill: 0.5rem;
+  --section-space: clamp(3.5rem, 7vw, 6rem);
+  --section-space-compact: clamp(2.75rem, 5vw, 4.5rem);
 
   /* Surfaces */
   --bg: #faf8f4;
@@ -201,8 +216,13 @@ main {
 }
 
 .hero-media {
-  background-color: var(--bg);
-  border: 1px solid var(--card);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(229, 237, 242, 0.92)),
+    var(--surface-1);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 0.85rem;
   width: 100%;
 }
 
@@ -210,7 +230,10 @@ main {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: var(--radius-md);
 }
+
+
 
 .epic-cinema {
   pointer-events:none;
