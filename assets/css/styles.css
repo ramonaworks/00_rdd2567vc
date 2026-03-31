@@ -78,7 +78,7 @@ body {
   font-family: Inter, system-ui, sans-serif;
   color: var(--ink);
   background-color: var(--bg);
-  line-height: 1.6;
+  line-height: 1.5;
   background:
     radial-gradient(circle at top left, rgba(217, 239, 247, 0.8), transparent 24%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(244, 240, 232, 0) 18%),
@@ -315,7 +315,7 @@ height: 100%;
 
 .case-card p {
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.4;
   margin: 0;
 }
 
