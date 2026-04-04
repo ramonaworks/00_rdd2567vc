@@ -46,106 +46,321 @@
   <nav id="site-nav" class="navbar navbar-expand-lg fixed-top" aria-label="Primary navigation"></nav>
 </header>
 
-<!-- Main Content -->
+
+
+
+
 <main id="main-content" tabindex="-1">
-<!-- Breadcrumb -->
-<div class="container py-1 small">
-  <a href="index.html#evidence-section" class="breadcrumb-item text-decoration-none">
-    <i class="bi bi-arrow-left"></i> Back to Selected Work
-  </a>
-  / <span class="text-secondary">Design Systems that Scale</span>
-</div>
-<!-- Enterprise Design Systems -->
+
 <!-- Hero -->
 <section class="py-3 py-lg-5">
-<div class="container">
-<div class="row g-4 align-items-start">
-  <div class="col-lg-7">
-    <p class="section-label mb-2">Case Study | Enterprise UX, Design Systems, and Platform Modernization</p>
-    <h1 class="hero-title mb-3">Enterprise Design Systems</h1>
-    <p class="hero-copy mb-3">
-      End-to-end design system work focused on modernizing legacy enterprise products,
-      establishing scalable UI and UX foundations, and creating clear handoff processes
-      that allow design and engineering teams to ship consistently at scale.
-      This work spans system architecture, component design, documentation,
-      and training programs that enable long-term adoption.
-    </p>
-    <a href="#evidence-section" class="btn btn-outline-dark px-4">
-    Explore
-    </a>
-  </div>
-  <div class="col-lg-5">
-    <div class="hero-media">
-      <img
-        src="/assets/images/case-studies/ux-cs-design-systems.webp"
-        alt="Enterprise design system and UI modernization overview">
+  <div class="container">
+    <div class="row align-items-start g-4">
+      <div class="col-lg-7">
+        <p class="section-label mb-2">Case Study | Enterprise UX, Design Systems, and Platform Modernization</p>
+        <h1 class="hero-title mb-3">Enterprise Design Systems</h1>
+        <p class="hero-copy mb-3">
+          End-to-end design system work focused on modernizing legacy enterprise products,
+          establishing scalable UI and UX foundations, and creating clear handoff processes
+          that allow design and engineering teams to ship consistently at scale.
+          This work spans system architecture, component design, documentation,
+          and training programs that enable long-term adoption.
+        </p>
+        <a href="#feature-carousel" class="btn btn-outline-dark rounded-3 px-4">Explore</a>
+      </div>
+      <div class="col-lg-5">
+        <div class="hero-media rounded-3 overflow-hidden">
+          <img src="/assets/images/case-studies/cs-design-engineer-governance.webp" class="img-fluid w-100 border-0" alt="Enterprise design system and UI modernization overview">
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
 </section>
 
-<!-- At a glance -->
-<section id="evidence-section" class="py-5 section-divider">
-<div class="container">
-<p class="section-label mb-4">At a glance</p>
-
-<div class="row g-4">
-  <div class="col-md-4">
-    <div class="work-card h-100">
-      <h3>System-level thinking</h3>
-      <p>
-        Designed and evolved enterprise design systems that unify typography,
-        color, layout, interaction patterns, and accessibility across
-        multiple products and legacy codebases.
-      </p>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="work-card h-100">
-      <h3>Design-to-dev handoff</h3>
-      <p>
-        Established clear, repeatable handoff workflows between design
-        and engineering to reduce rework, ambiguity, and delivery friction.
-      </p>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="work-card h-100">
-      <h3>Enablement and training</h3>
-      <p>
-        Built structured programs to train interns and junior designers
-        on mobile UX, competitive analysis, and layout ideation
-        within enterprise constraints.
-      </p>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-
-<!-- Context -->
-<section class="py-5 section-divider">
-<div class="container">
-<p class="section-label mb-2">Context</p>
-<h2 class="section-title mb-3">Design systems as operational infrastructure</h2>
-<p class="section-copy">
-  In enterprise environments, inconsistency is expensive.
-  Legacy UI patterns, fragmented components, and undocumented behaviors
-  slow teams down and introduce risk.
-  This work treats the design system as operational infrastructure,
-  aligning UX quality, accessibility standards, and development efficiency
-  into a single, shared source of truth.
+<section class="py-lg-5">
+  <div class="container"> 
+        <p class="section-label">Process | At a glance</p>
+        <h2 class="section-title ">Design systems as operational infrastructure</h2>  
+        <p class="section-copy">
+  In enterprise environments, inconsistency is expensive. Legacy UI patterns, fragmented components, and undocumented behaviors slow teams down and introduce risk. This work treats the design system as operational infrastructure, aligning UX quality, accessibility standards, and development efficiency into a single, shared source of truth.
 </p>
-</div>
+  </div>
 </section>
+        
+
+
+<!-- Feature Carousel with Script-->
+<section id="feature-carousel" class="pb-3">
+  <div class="container demo-carousel" tabindex="0" aria-labelledby="feature-carousel-title"> 
+    <p class="section-label mb-2">High Level Overview</p>
+    <div class="row align-items-start g-4">
+      <div class="col-lg-2">
+
+      <div class="demo-carousel__rail" role="group" aria-label="Feature navigation"></div>
+      </div>
+      <div class="col-lg-10">
+        <div class="demo-carousel__media-shell hero-media">
+          <nav class="demo-carousel__dots" aria-label="Slide navigation"></nav>
+          <div class="demo-carousel__viewport" id="demo-carousel-viewport" aria-roledescription="carousel" aria-label="Carousel slides">
+            <div class="demo-carousel__track"></div>
+          </div>
+        </div>
+        <p class="demo-carousel__sr" id="demo-carousel-status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(() => {
+  const carouselRoot = document.querySelector('.demo-carousel');
+  if (!carouselRoot) return;
+
+  // Prevent the legacy placeholder initializer from taking over this section.
+  carouselRoot.classList.remove('demo-carousel');
+  carouselRoot.style.visibility = 'hidden';
+
+  const items = [
+    {
+      label: 'Step 01:',
+      heading: 'Architectural thinking & application',
+      copy: 'This website uses Bootstrap as a foundational layer, extending its grid and responsive system into a scalable, token-driven design architecture. I prioritized speed to production while enabling customization and growth. These  patterns are transferable across React, Angular, Vue, and Tailwind ecosystems.',
+      image: '/assets/images/case-studies/cs-design-engineer-governance.webp',
+      alt: 'Design Engineering Architecture',
+      accent: '#8B3F00'
+    },
+    {
+      label: 'Step 02:',
+      heading: 'Design-to-dev handoff',
+      copy: 'Built design-to-dev handoff systems for regulated platforms, modernizing legacy UI into component-driven architectures. This site demonstrates that process, showing how design is translated into developer-ready specifications, tokens, and patterns for scalable delivery.',
+      image: '/assets/images/case-studies/cs-design-dev-handoff.webp',
+      alt: 'Work with product and engineering',
+      accent: '#8B3F00'
+    },
+    {
+      label: 'Step 03:',
+      heading: 'Enablement and training',
+      copy: 'Built enablement systems to operationalize design system adoption through documentation, training, and governance. This site reflects that approach at a high level, showing how components, tokens, and patterns are structured for consistent, real-world implementation and scale.',
+      image: '/assets/images/case-studies/cs-design-systems-enablement.webp',
+      alt: 'Design System Enablement',
+      accent: '#8B3F00'
+    }
+  ];
+
+  const tabItems = items.map(({ label, heading, accent }) => ({
+    label,
+    heading,
+    accent
+  }));
+
+  const clamp = (value) => Math.max(0, Math.min(items.length - 1, value));
+
+  const init = () => {
+    carouselRoot.classList.add('demo-carousel');
+
+    const rail = carouselRoot.querySelector('.demo-carousel__rail');
+    const dots = carouselRoot.querySelector('.demo-carousel__dots');
+    const track = carouselRoot.querySelector('.demo-carousel__track');
+    const viewport = carouselRoot.querySelector('#demo-carousel-viewport');
+    const live = carouselRoot.querySelector('#demo-carousel-status');
+
+    let activeIndex = 0;
+    let dragState = null;
+
+    const setTransform = (offsetPx = 0, baseIndex = activeIndex) => {
+      track.style.transform = offsetPx
+        ? `translate3d(calc(${-baseIndex * 100}% + ${offsetPx}px), 0, 0)`
+        : `translate3d(${-baseIndex * 100}%, 0, 0)`;
+    };
+
+    rail.innerHTML = tabItems.map((item, index) => `
+      <button
+        class="demo-carousel__nav-card demo-carousel__tab-card work-card"
+        type="button"
+        data-index="${index}"
+        aria-label="Show ${item.label}"
+        aria-pressed="${index === 0}"
+        style="--accent:${item.accent || '#143a84'}"
+      >
+        <span class="section-label mb-2">${item.label}</span>
+        <p class="case-title mb-2">${item.heading}</p>
+      </button>
+    `).join('');
+
+    dots.innerHTML = `
+      <span class="demo-carousel__dots-track" aria-hidden="true"></span>
+      ${items.map((item, index) => `
+        <button
+          class="demo-carousel__dot${index === 0 ? ' is-active' : ''}"
+          type="button"
+          data-index="${index}"
+          style="--accent:${item.accent || '#143a84'}"
+          aria-label="Step ${index + 1}: ${item.label}"
+          aria-pressed="${index === 0}"
+        >${index + 1}</button>
+      `).join('')}
+    `;
+
+    track.innerHTML = items.map((item, index) => `
+      <article class="demo-carousel__slide" aria-hidden="${index !== 0}" style="--accent:${item.accent || '#143a84'}">
+        <img class="demo-carousel__slide-image" src="${item.image}" alt="${item.alt}">
+        <div class="demo-carousel__caption" style="--accent:${item.accent || '#143a84'}">
+          <p class="section-label mb-2">${item.label}</p>
+          <h3 class="case-title mb-2">${item.heading}</h3>
+          <p class="hero-copy mb-0">${item.copy}</p>
+        </div>
+      </article>
+    `).join('');
+
+    const tabButtons = Array.from(rail.querySelectorAll('.demo-carousel__tab-card'));
+    const dotButtons = Array.from(dots.querySelectorAll('.demo-carousel__dot'));
+    const slides = Array.from(track.querySelectorAll('.demo-carousel__slide'));
+
+    const renderState = () => {
+      tabButtons.forEach((button, index) => {
+        const active = index === activeIndex;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+
+      dotButtons.forEach((button, index) => {
+        const active = index === activeIndex;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+
+      slides.forEach((slide, index) => {
+        const active = index === activeIndex;
+        slide.setAttribute('aria-hidden', String(!active));
+        if ('inert' in slide) {
+          slide.inert = !active;
+        }
+      });
+
+      live.textContent = `${items[activeIndex].label} selected.`;
+    };
+
+    const setActive = (index) => {
+      activeIndex = clamp(index);
+      renderState();
+      setTransform();
+    };
+
+    const finishDrag = () => {
+      if (!dragState) return;
+
+      viewport.classList.remove('is-dragging');
+      track.classList.remove('is-dragging');
+
+      const threshold = Math.max(56, viewport.clientWidth * 0.18);
+      const nextIndex = Math.abs(dragState.offsetX) >= threshold
+        ? (dragState.offsetX < 0 ? dragState.startIndex + 1 : dragState.startIndex - 1)
+        : dragState.startIndex;
+
+      dragState = null;
+      setActive(nextIndex);
+    };
+
+    tabButtons.forEach((button) => {
+      button.addEventListener('click', () => setActive(Number(button.dataset.index)));
+    });
+
+    dotButtons.forEach((button) => {
+      button.addEventListener('click', () => setActive(Number(button.dataset.index)));
+    });
+
+    viewport.addEventListener('pointerdown', (event) => {
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+
+      dragState = {
+        pointerId: event.pointerId,
+        startX: event.clientX,
+        startY: event.clientY,
+        offsetX: 0,
+        startIndex: activeIndex,
+        locked: false,
+        cancelled: false
+      };
+
+      viewport.setPointerCapture(event.pointerId);
+      viewport.classList.add('is-dragging');
+      track.classList.add('is-dragging');
+    });
+
+    viewport.addEventListener('pointermove', (event) => {
+      if (!dragState || event.pointerId !== dragState.pointerId) return;
+
+      const deltaX = event.clientX - dragState.startX;
+      const deltaY = event.clientY - dragState.startY;
+
+      if (!dragState.locked) {
+        if (Math.abs(deltaX) < 8 && Math.abs(deltaY) < 8) return;
+        if (Math.abs(deltaY) > Math.abs(deltaX) + 4) {
+          dragState.cancelled = true;
+          return;
+        }
+        dragState.locked = true;
+      }
+
+      if (dragState.cancelled) return;
+
+      const atStart = dragState.startIndex === 0 && deltaX > 0;
+      const atEnd = dragState.startIndex === items.length - 1 && deltaX < 0;
+      const resistance = atStart || atEnd ? 0.32 : 1;
+      dragState.offsetX = deltaX * resistance;
+      setTransform(dragState.offsetX, dragState.startIndex);
+    });
+
+    viewport.addEventListener('pointerup', (event) => {
+      if (!dragState || event.pointerId !== dragState.pointerId) return;
+
+      if (!dragState.locked || dragState.cancelled) {
+        dragState = null;
+        viewport.classList.remove('is-dragging');
+        track.classList.remove('is-dragging');
+        setTransform();
+        return;
+      }
+
+      finishDrag();
+    });
+
+    viewport.addEventListener('pointercancel', () => {
+      if (!dragState) return;
+
+      dragState = null;
+      viewport.classList.remove('is-dragging');
+      track.classList.remove('is-dragging');
+      setTransform();
+    });
+
+    carouselRoot.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        setActive(activeIndex - 1);
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        setActive(activeIndex + 1);
+      }
+    });
+
+    renderState();
+    setTransform();
+    carouselRoot.style.visibility = '';
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init, { once: true });
+  } else {
+    init();
+  }
+})();
+</script> 
+
 
 <!-- Scope -->
 <section class="py-5">
 <div class="container">
-<p class="section-label mb-4">Scope of work</p>
+<p class="section-label mb-4">Scope of work and responsibilities</p>
 
 <div class="row g-4">
   <div class="col-md-6">
@@ -311,9 +526,7 @@
 <!-- Impact -->
 <section class="py-5 section-divider">
 <div class="container">
-<p class="section-label mb-2">Impact</p>
-<h2 class="section-title mb-3">What organizations gain</h2>
-
+<p class="section-label mb-2">Impact - What organizations gain</p>
 <div class="row g-4 mt-1">
   <div class="col-md-4">
     <div class="work-card h-100">
@@ -327,7 +540,7 @@
 
   <div class="col-md-4">
     <div class="work-card h-100">
-      <h3>Consistent UX</h3>
+      <h3>Consistency </h3>
       <p>
         Users experience coherent interfaces across products,
         reducing learning curves and support burden.
@@ -363,6 +576,252 @@
 </div>
 </section>
 </main>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(() => {
+  const carouselRoot = document.querySelector('.demo-carousel');
+  if (!carouselRoot) return;
+
+  const rail = carouselRoot.querySelector('.demo-carousel__rail');
+  const dots = carouselRoot.querySelector('.demo-carousel__dots');
+  const track = carouselRoot.querySelector('.demo-carousel__track');
+  const viewport = carouselRoot.querySelector('#demo-carousel-viewport');
+  const live = carouselRoot.querySelector('#demo-carousel-status');
+
+    const items = [
+      {
+        label: 'product-tab-1',
+        heading: 'Placeholder heading one',
+        copy: 'This reusable shell is ready for your own product copy, portfolio narrative, or feature summary.',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80',
+      alt: 'Workspace with laptop, notebook, and warm natural light',
+      accent: '#143a84'
+    },
+    {
+      label: 'product-tab-2',
+      heading: 'Placeholder heading two',
+      copy: 'Swap in a different image, update the text, and keep the same synchronized carousel behavior.',
+      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80',
+      alt: 'Team collaborating around a board in a bright meeting space',
+      accent: '#4662f1'
+    },
+    {
+      label: 'product-tab-3',
+      heading: 'Placeholder heading three',
+      copy: 'The layout, motion, and state management stay the same while the content stays easy to replace.',
+      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1600&q=80',
+      alt: 'Modern workspace with notes and a monitor beside a window',
+        accent: '#39b583'
+      }
+    ];
+
+  const tabItems = items.map(({ label, heading, accent }) => ({
+    label,
+    heading,
+    accent
+  }));
+
+  let activeIndex = 0;
+  let dragState = null;
+
+  const clamp = (value) => Math.max(0, Math.min(items.length - 1, value));
+
+  const setTransform = (offsetPx = 0, baseIndex = activeIndex) => {
+    track.style.transform = offsetPx
+      ? `translate3d(calc(${-baseIndex * 100}% + ${offsetPx}px), 0, 0)`
+      : `translate3d(${-baseIndex * 100}%, 0, 0)`;
+  };
+
+  rail.innerHTML = tabItems.map((item, index) => `
+    <button
+      class="demo-carousel__nav-card demo-carousel__tab-card work-card"
+      type="button"
+      data-index="${index}"
+      aria-label="Show ${item.label}"
+      aria-pressed="${index === 0}"
+      style="--accent:${item.accent || '#143a84'}"
+    >
+      <span class="section-label mb-2">${item.label}</span>
+      <p class="case-title mb-2">${item.heading}</p>
+    </button>
+  `).join('');
+
+  dots.innerHTML = `
+    <span class="demo-carousel__dots-track" aria-hidden="true"></span>
+    ${items.map((item, index) => `
+      <button
+        class="demo-carousel__dot${index === 0 ? ' is-active' : ''}"
+        type="button"
+        data-index="${index}"
+        style="--accent:${item.accent || '#143a84'}"
+        aria-label="Step ${index + 1}: ${item.label}"
+        aria-pressed="${index === 0}"
+      >${index + 1}</button>
+    `).join('')}
+  `;
+
+  track.innerHTML = items.map((item, index) => `
+    <article class="demo-carousel__slide" aria-hidden="${index !== 0}" style="--accent:${item.accent || '#143a84'}">
+      <img class="demo-carousel__slide-image" src="${item.image}" alt="${item.alt}">
+      <div class="demo-carousel__caption" style="--accent:${item.accent || '#143a84'}">
+        <p class="section-label mb-2">${item.label}</p>
+        <h3 class="case-title mb-2">${item.heading}</h3>
+        <p class="hero-copy mb-0">${item.copy}</p>
+      </div>
+    </article>
+  `).join('');
+
+  const tabButtons = Array.from(rail.querySelectorAll('.demo-carousel__tab-card'));
+  const dotButtons = Array.from(dots.querySelectorAll('.demo-carousel__dot'));
+  const slides = Array.from(track.querySelectorAll('.demo-carousel__slide'));
+
+  const renderState = () => {
+    tabButtons.forEach((button, index) => {
+      const active = index === activeIndex;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+
+    dotButtons.forEach((button, index) => {
+      const active = index === activeIndex;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+
+    slides.forEach((slide, index) => {
+      const active = index === activeIndex;
+      slide.setAttribute('aria-hidden', String(!active));
+      if ('inert' in slide) {
+        slide.inert = !active;
+      }
+    });
+
+    live.textContent = `${items[activeIndex].label} selected.`;
+  };
+
+  const setActive = (index) => {
+    activeIndex = clamp(index);
+    renderState();
+    setTransform();
+  };
+
+  const finishDrag = () => {
+    if (!dragState) return;
+
+    viewport.classList.remove('is-dragging');
+    track.classList.remove('is-dragging');
+
+    const threshold = Math.max(56, viewport.clientWidth * 0.18);
+    const nextIndex = Math.abs(dragState.offsetX) >= threshold
+      ? (dragState.offsetX < 0 ? dragState.startIndex + 1 : dragState.startIndex - 1)
+      : dragState.startIndex;
+
+    dragState = null;
+    setActive(nextIndex);
+  };
+
+  tabButtons.forEach((button) => {
+    button.addEventListener('click', () => setActive(Number(button.dataset.index)));
+  });
+
+  dotButtons.forEach((button) => {
+    button.addEventListener('click', () => setActive(Number(button.dataset.index)));
+  });
+
+  viewport.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'mouse' && event.button !== 0) return;
+
+    dragState = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      offsetX: 0,
+      startIndex: activeIndex,
+      locked: false,
+      cancelled: false
+    };
+
+    viewport.setPointerCapture(event.pointerId);
+    viewport.classList.add('is-dragging');
+    track.classList.add('is-dragging');
+  });
+
+  viewport.addEventListener('pointermove', (event) => {
+    if (!dragState || event.pointerId !== dragState.pointerId) return;
+
+    const deltaX = event.clientX - dragState.startX;
+    const deltaY = event.clientY - dragState.startY;
+
+    if (!dragState.locked) {
+      if (Math.abs(deltaX) < 8 && Math.abs(deltaY) < 8) return;
+      if (Math.abs(deltaY) > Math.abs(deltaX) + 4) {
+        dragState.cancelled = true;
+        return;
+      }
+      dragState.locked = true;
+    }
+
+    if (dragState.cancelled) return;
+
+    const atStart = dragState.startIndex === 0 && deltaX > 0;
+    const atEnd = dragState.startIndex === items.length - 1 && deltaX < 0;
+    const resistance = atStart || atEnd ? 0.32 : 1;
+    dragState.offsetX = deltaX * resistance;
+    setTransform(dragState.offsetX, dragState.startIndex);
+  });
+
+  viewport.addEventListener('pointerup', (event) => {
+    if (!dragState || event.pointerId !== dragState.pointerId) return;
+
+    if (!dragState.locked || dragState.cancelled) {
+      dragState = null;
+      viewport.classList.remove('is-dragging');
+      track.classList.remove('is-dragging');
+      setTransform();
+      return;
+    }
+
+    finishDrag();
+  });
+
+  viewport.addEventListener('pointercancel', () => {
+    if (!dragState) return;
+
+    dragState = null;
+    viewport.classList.remove('is-dragging');
+    track.classList.remove('is-dragging');
+    setTransform();
+  });
+
+  carouselRoot.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      setActive(activeIndex - 1);
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      setActive(activeIndex + 1);
+    }
+  });
+
+  renderState();
+  setTransform();
+})();
+</script>
+
+
+
+
 
 <footer id="site-footer"></footer>
 <script>
